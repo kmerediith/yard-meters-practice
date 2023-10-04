@@ -4,3 +4,20 @@ console.log("Input Yards: ", inputYards)
 function convertToMeters(yards){
     return yards * 0.9144;
 }
+let convertedMeters = convertToMeters(inputYards);
+console.log("Converted Meters: ", convertedMeters)
+
+function createMessage(yards, meters){
+    let message = '';
+    const numYards = yards * 1;
+
+    if (numYards === 1760){
+        message = "That is a long mile";
+    }else if (numYards === 100){
+        message = "That is as long as a football field"
+    }else if (numYards === 26){
+        message = "That is a long as a tennis court!"
+    }
+
+    return `${yards} yards is ${ meters} meters. ${message}`;
+}
